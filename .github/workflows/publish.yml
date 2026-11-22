@@ -1,0 +1,45 @@
+name: Publish OmniPlayr Bluetooth Audio
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate release version
+        shell: bash
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          BACKEND_VERSION="$(node -p "require('./backend/plugins/bluetooth-audio@Nathanuk1231/package.json').version")"
+          FRONTEND_VERSION="$(node -p "require('./frontend/src/plugins/bluetooth-audio@Nathanuk1231/package.json').version")"
+          test "$TAG_VERSION" = "$BACKEND_VERSION"
+          test "$TAG_VERSION" = "$FRONTEND_VERSION"
+
+      - name: Install OmniPlayr CLI
+        run: npm install --global @omniplayr/cli
+
+      - name: Publish backend package
+        working-directory: backend/plugins/bluetooth-audio@Nathanuk1231
+        run: omniplayr publish
+        env:
+          OMNIPLAYR_ACCESS_TOKEN: ${{ secrets.OMNIPLAYR_ACCESS_TOKEN }}
+
+      - name: Publish frontend package
+        working-directory: frontend/src/plugins/bluetooth-audio@Nathanuk1231
+        run: omniplayr publish
+        env:
+          OMNIPLAYR_ACCESS_TOKEN: ${{ secrets.OMNIPLAYR_ACCESS_TOKEN }}

@@ -1,0 +1,11 @@
+{
+  "id": "bluetooth-audio@Nathanuk1231",
+  "name": "Bluetooth Audio",
+  "author": "Nathanuk1231",
+  "version": "1.2.0",
+  "description": "Receive live Bluetooth A2DP audio from phones, tablets and computers.",
+  "type": "frontend",
+  "min-dev-version": "2026.7.6",
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md"
+}
