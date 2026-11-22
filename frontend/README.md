@@ -9,5 +9,5 @@ The backend requires BlueZ, system D-Bus and PipeWire, and must be able to acces
 Install both parts from the root of an OmniPlayr project with:
 
 ```sh
-omniplayr install bluetooth-audio@Nathanuk1231
+omniplayr install bluetooth-audio@nathanasd1231
 ```

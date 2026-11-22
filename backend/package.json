@@ -1,10 +1,10 @@
 {
   "name": "bluetooth-audio",
-  "author": "Nathanuk1231",
-  "version": "1.2.0",
+  "author": "nathanasd1231",
+  "version": "1.2.1",
   "description": "Auto-starting Linux Bluetooth A2DP receiver source for OmniPlayr.",
   "type": "backend",
-  "id": "bluetooth-audio@Nathanuk1231",
+  "id": "bluetooth-audio@nathanasd1231",
   "pythonDependencies": {
     "dbus-next": ">=0.2.3,<1.0"
   },

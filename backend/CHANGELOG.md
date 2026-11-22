@@ -8,4 +8,4 @@
 - Register a BlueZ pairing agent and pass pairing prompts to the plugin interface.
 - Add receiver health and host capability diagnostics.
 - Add a GitHub Actions workflow for publishing both plugin packages.
-- Publish the plugin under the original author namespace `bluetooth-audio@Nathanuk1231`.
+- Publish the plugin under the original author namespace `bluetooth-audio@nathanasd1231`.

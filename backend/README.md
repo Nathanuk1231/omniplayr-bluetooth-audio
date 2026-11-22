@@ -24,7 +24,7 @@ Any phone, tablet or computer with Bluetooth A2DP audio-source support can conne
 ## Install
 
 ```sh
-omniplayr install bluetooth-audio@Nathanuk1231
+omniplayr install bluetooth-audio@nathanasd1231
 ```
 
 The OmniPlayr CLI installs the frontend and backend packages and registers the backend plugin.

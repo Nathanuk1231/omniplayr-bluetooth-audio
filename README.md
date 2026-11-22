@@ -36,7 +36,7 @@ The receiver currently runs on Linux. Windows and macOS server support is not cu
 Install Bluetooth Audio through the OmniPlayr CLI:
 
 ```bash
-omniplayr install bluetooth-audio@Nathanuk1231
+omniplayr install bluetooth-audio@nathanasd1231
 ```
 
 The CLI installs both the frontend and backend components.
